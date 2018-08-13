@@ -117,6 +117,6 @@ def validate_migration_options(
     instance_volume_types = set(instance_info['attached_storage'])
 
     if not instance_volume_types.issubset(source_volume_types):
-        LOG.info("%s volume types are not mapped." %
+        LOG.info("%s volume types are not mapped." % (
                  instance_volume_types -
-                 source_mapped_volume_types)
+                 source_mapped_volume_types))
